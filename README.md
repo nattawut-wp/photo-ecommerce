@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# photo-ecommerce
 
-## Getting Started
+ระบบร้านค้าออนไลน์ (E-commerce) สำหรับขายรูปภาพหรือสินค้าทั่วไป พัฒนาด้วย Next.js และเชื่อมต่อกับ Node.js Backend
 
-First, run the development server:
+## คุณสมบัติหลัก
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- ระบบสมาชิก (Authentication): รองรับการสมัครสมาชิกและเข้าสู่ระบบ
+- การจัดการสินค้า (Product Management): ดูรายการสินค้า, ค้นหาสินค้า และดูรายละเอียดสินค้า
+- ตะกร้าสินค้า (Shopping Cart): เพิ่ม/ลดจำนวนสินค้า และลบสินค้าออกจากตะกร้า
+- ระบบจัดการสำหรับผู้ดูแล (Admin Dashboard): จัดการสินค้า (เพิ่ม/ลบ/แก้ไข) และดูรายการสั่งซื้อ
+- ระบบชำระเงิน (Payment Integration): รองรับการชำระเงินผ่าน Stripe
+- การออกแบบที่รองรับทุกอุปกรณ์ (Responsive Design): ใช้งานได้ทั้งบนคอมพิวเตอร์และมือถือ
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## เทคโนโลยีที่ใช้
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Frontend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 15+ (App Router)
+- React 19
+- Tailwind CSS 4
+- TypeScript
+- Radix UI
+- Lucide React
+- Axios
+- React Hook Form + Zod (สำหรับการจัดการฟอร์มและตรวจสอบข้อมูล)
 
-## Learn More
+### Backend
 
-To learn more about Next.js, take a look at the following resources:
+- Node.js
+- Express
+- MongoDB (Mongoose)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## การติดตั้งและการเริ่มใช้งาน
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### การตั้งค่า Environment Variables
 
-## Deploy on Vercel
+สร้างไฟล์ .env ในโฟลเดอร์ root และกำหนดค่าต่างๆ เช่น:
+NEXT_PUBLIC_API_URL=[URL ของ Backend API]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ขั้นตอนการรันโปรเจกต์
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. ติดตั้ง Dependencies:
+   npm install
+
+2. รันโปรเจกต์ในโหมด Development:
+   npm run dev
+
+3. เปิดเบราว์เซอร์และเข้าไปที่:
+   http://localhost:3000
+
+---
+
+# photo-ecommerce
+
+E-commerce platform for selling photos or general products, developed with Next.js and connected to a Node.js Backend.
+
+## Key Features
+
+- Authentication: Supports user registration and login.
+- Product Management: View product lists, search, and view product details.
+- Shopping Cart: Add/reduce quantities and remove items from the cart.
+- Admin Dashboard: Manage products (Add/Delete/Edit) and view order lists.
+- Payment Integration: Supports payments via Stripe.
+- Responsive Design: Compatible with both desktop and mobile devices.
+
+## Tech Stack
+
+### Frontend
+
+- Next.js 15+ (App Router)
+- React 19
+- Tailwind CSS 4
+- TypeScript
+- Radix UI
+- Lucide React
+- Axios
+- React Hook Form + Zod (Form management and validation)
+
+### Backend
+
+- Node.js
+- Express
+- MongoDB (Mongoose)
+
+## Installation and Getting Started
+
+### Environment Variables Setup
+
+Create a .env file in the root directory and define values such as:
+NEXT_PUBLIC_API_URL=[Backend API URL]
+
+### Project Startup Steps
+
+1. Install Dependencies:
+   npm install
+
+2. Run in Development Mode:
+   npm run dev
+
+3. Open your browser and go to:
+   http://localhost:3000
