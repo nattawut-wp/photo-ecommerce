@@ -185,49 +185,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 -z-10" />
-        
-        <div className="container mx-auto px-4">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 p-12 md:p-16">
-            {/* Decorative Elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-            
-            <div className="relative z-10 text-center">
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                Ready to Transform Your Projects?
-              </h2>
-              <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-                Join thousands of satisfied customers and discover the perfect image for your next creative endeavor.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="#latest">
-                  <Button 
-                    size="lg" 
-                    className="bg-white text-violet-700 hover:bg-gray-100 px-8 py-6 text-lg font-semibold shadow-xl shadow-black/20 transition-all duration-300"
-                  >
-                    Start Exploring
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                </Link>
-                <Link href="/login">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold transition-all duration-300"
-                  >
-                    Create Account
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer spacer */}
       <div className="h-10 bg-slate-950" />
     </div>
