@@ -13,6 +13,7 @@ import { Upload, X } from "lucide-react";
 import Image from "next/image";
 import { ProductFormData } from "@/types";
 
+//TODO: Add product form
 export default function AddProductForm() {
   const [images, setImages] = useState<(File | null)[]>([null, null, null, null]);
   const { register, handleSubmit, reset, setValue, watch } = useForm<ProductFormData>({
@@ -41,6 +42,7 @@ export default function AddProductForm() {
     setHeight("");
   };
 
+  //TODO: Remove size
   const removeSize = (sizeToRemove: string) => {
     setValue("sizes", selectedSizes.filter(s => s !== sizeToRemove));
   };
