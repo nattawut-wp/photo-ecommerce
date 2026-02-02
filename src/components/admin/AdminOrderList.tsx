@@ -8,10 +8,12 @@ import { formatPrice } from "@/lib/utils";
 import { Package } from "lucide-react";
 import { Order, OrderItem } from "@/types";
 
+//TODO: Admin order list
 export default function AdminOrderList() {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
 
+  //TODO: Fetch orders
   const fetchOrders = async () => {
     try {
         const res = await api.get('/order/all-orders');
@@ -29,6 +31,7 @@ export default function AdminOrderList() {
     fetchOrders();
   }, []);
 
+  //TODO: Handle status change
   const handleStatusChange = async (orderId: string, newStatus: string) => {
       try {
           const res = await api.post('/order/update-status', { orderId, status: newStatus });

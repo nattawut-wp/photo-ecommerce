@@ -18,7 +18,7 @@ export default function VerifyPayment() {
     if (!success || !orderId) {
         return;
     }
-
+//TODO: Verify payment
     const verify = async () => {
         try {
             const res = await api.post("/order/verify-stripe", { success, orderId });

@@ -11,6 +11,7 @@ import { toast } from "sonner";
 import { formatPrice } from "@/lib/utils";
 import { Product } from "@/types";
 
+//TODO: Admin product list
 export default function AdminProductList() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -18,6 +19,8 @@ export default function AdminProductList() {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [productToDelete, setProductToDelete] = useState<Product | null>(null);
 
+
+  //TODO: Fetch products
   const fetchProducts = async () => {
     try {
         const res = await api.get('/product/list');
@@ -33,11 +36,13 @@ export default function AdminProductList() {
     fetchProducts();
   }, []);
 
+  //TODO: Handle delete click
   const handleDeleteClick = (product: Product) => {
       setProductToDelete(product);
       setDeleteDialogOpen(true);
   }
 
+  //TODO: Confirm delete
   const confirmDelete = async () => {
       if (!productToDelete) return;
       

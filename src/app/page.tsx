@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Sparkles, Zap, Shield, Award, Star, TrendingUp, ImageIcon, Users } from "lucide-react";
 
-// ฟังก์ชันดึงข้อมูล (Server Side)
+
 async function getProducts() {
   const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
   try {
     const res = await fetch(`${backendUrl}/api/v1/product/list`, { 
-        cache: 'no-store' // ดึงข้อมูลใหม่ทุกครั้งที่รีเฟรช
+        cache: 'no-store' 
     });
     if (!res.ok) return [];
     return res.json();

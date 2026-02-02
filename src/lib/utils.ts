@@ -5,6 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+// format price to thai baht
 export const formatPrice = (amount: number) => {
   return new Intl.NumberFormat('th-TH', {
     style: 'currency',

@@ -27,6 +27,7 @@ export default function AddProductForm() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
+  //TODO: Add size
   const addSize = () => {
     if (!width || !height) {
       toast.error("Please enter both width and height");
